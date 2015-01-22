@@ -1,2 +1,0 @@
-# dammaku
-dammaku chatroom
