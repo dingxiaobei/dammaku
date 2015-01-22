@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- 兼容一下老人 不知道管不管用 -->
+    <meta http-equiv="X-UA-Compatible" value="IE=9">
+    <!-- 图标为啥不管用呢 -->
+    <link type="image/x-icon" rel="icon" href="favicon.ico">
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link type="image/x-icon" rel="bookmark" href="/favicon.ico" />
+    <!-- 样式文件合一了 -->
+    <link rel="stylesheet" href="style.css">
+    <title>简易实现实时弹幕beta - 基于对Socket编程的好奇加上nodejs和abplayer的膜拜 </title>
+</head>
+<body>
+    <!-- 聊天窗，也是弹幕窗，弹幕只占了屏幕一半高度，还不知道怎么调整，你知道了教教我 -->
+    <div class="chat page">
+        <div class="m20 abp" id="player">
+            <div id="commentCanvas" class="container">
+            </div>
+            <div class="chatArea">
+                <ul class="messages">
+                </ul>
+                <input class="inputMessage" placeholder="输入消息..." />
+            </div>
+        </div>
+    </div>
+    <!-- 登录，其实就是输入的昵称，Enter完了上线，分给你个字体颜色 -->
+    <div class="login page">
+        <div class="form">
+            <h3 class="title">
+                输入你的昵称...</h3>
+            <input class="usernameInput" type="text" maxlength="14" />
+        </div>
+    </div>
+    <!-- js文件没有合并压缩，方便大家研究，注释量也跟得上 -->
+    <!-- 弹幕组件：CommentCoreLibrary， HTML5的 性能是硬伤 我看AB站还是用的Flash版 -->
+    <script src="/CommentFilter.js"></script>
+    <script src="/CommentSpaceAllocator.js"></script>
+    <script src="/CommentCoreLibrary.js"></script>
+    <!-- 处理弹幕效果 -->
+    <script src="/danmaku.js"></script>
+    <!-- jq!! 本地实验还是本地好，官网cdn竟然延迟900ms -->
+    <script src="jquery-1.10.2.min.js"></script>
+    <!-- socket.io组件 for nodejs -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- 利用socket.io处理实时通讯 咳咳 这就是socket？后台处理的很机智简洁 -->
+    <script src="/main.js"></script>
+    <!-- 新消息提示在标题上 -->
+    <script src="/blink.js"></script>
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+/* Fix user-agent */
+
+/* css我的技术瞎点啊，这里面很多样式重复，没来及整理呢，请吐槽 */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, input {
+  font-family:
+    "HelveticaNeue-Light",
+    "Helvetica Neue Light",
+    "Helvetica Neue",
+    Helvetica,
+    Arial,
+    "Lucida Grande",
+    sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+/* Pages */
+
+.pages {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* 输入昵称页 */
+
+.login.page {
+  background-color: #fff;
+}
+
+.login.page .form {
+  height: 100px;
+  margin-top: -100px;
+  position: absolute;
+
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.login.page .form .usernameInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 400px;
+}
+
+.login.page .title {
+  font-size: 200%;
+}
+
+.login.page .usernameInput {
+  font-size: 200%;
+  letter-spacing: 3px;
+}
+
+.login.page .title, .login.page .usernameInput {
+  color: #000;
+  font-weight: 100;
+}
+
+/* 聊天窗 */
+
+.chat.page {
+  height: 100%;
+}
+
+/* 字体 */
+
+.messages {
+  font-size: 150%;
+}
+
+.inputMessage {
+  font-size: 100%;
+}
+
+.log {
+  color: gray;
+  font-size: 70%;
+  margin: 5px;
+  text-align: center;
+}
+
+/* 消息 */
+
+.chatArea {
+  height: 100%;
+  padding-bottom: 60px;
+}
+
+.messages {
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 10px 20px 10px 20px;
+}
+
+.message.typing .messageBody {
+  color: gray;
+}
+
+.username {
+  float: left;
+  font-weight: 700;
+  overflow: hidden;
+  padding-right: 15px;
+  text-align: right;
+}
+
+/* 输入框 */
+
+.inputMessage {
+  border: 10px solid #000;
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  outline: none;
+  padding-left: 10px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+
+/* 弹幕 */
+
+div.abp{
+	position:relative;
+}
+.abp .container{
+	overflow:hidden;
+	display:block;
+	z-index:9999;
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.abp .container .cmt{
+	padding:3px 0 0 0;margin:0;
+	line-height:100%;
+	font-family:Simhei,Simsun,Heiti,"MS Mincho","Meiryo","Microsoft Yahei",monospace;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color:#fff;
+	letter-spacing:0;
+	font-size:25px;
+	position:absolute;
+	word-break:none;
+	text-wrap:none;
+	border:0 !important;
+}
+.cmt.noshadow{
+	text-shadow: none !important;
+	-webkit-text-stroke: none !important;
+}
+.webkit-helper{
+	text-shadow: none;
+	-webkit-text-stroke: 0.2px black;
+	font-weight:bold;
+}
+
+/* 播放器区域 */
+
+#player{
+	/*position:relative;*/
+	margin:0;padding:0;
+	width:100%;height:100%;
+	/*background:#000;*/
+	background-color: transparent;
+}
+
+#player:full-screen{ margin:10px 0 0 0; width:100%; height:100%;}
+#player:-webkit-full-screen{ margin:10px 0 0 0; width:100%; height:100%;}
+#player:-moz-full-screen{ margin:10px 0 0 0; width:100%; height:100%;}
+#player:-ms-full-screen{ margin:10px 0 0 0; width:100%; height:100%;}
+
