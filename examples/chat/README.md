@@ -1,10 +1,10 @@
 
 # Socket.IO Chat
-
+本身就是官方的示例，我修改了一下
 A simple chat demo for socket.io
 
 ## How to use
-
+下面就是使用说明了，启动后监听了80端口，直接可以访问自己ip，跟局域网的其他人一起测试。
 ```
 $ cd socket.io
 $ npm install
@@ -13,7 +13,7 @@ $ npm install
 $ node .
 ```
 
-And point your browser to `http://localhost:3000`. Optionally, specify
+And point your browser to `http://localhost`. Optionally, specify
 a port by supplying the `PORT` env variable.
 
 ## Features
